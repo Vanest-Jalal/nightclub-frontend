@@ -1,11 +1,12 @@
 :root {
-  /* ==== Colors ==== */
-  /* PRIMITIVES */
+  /* ==== COLORS ==== */
+  /* Primitives */
   --color-black: oklch(0% 0 0);
   --color-white: oklch(100% 0 0);
   --color-gray-400: oklch(81.5% 0 0);
   --color-gray-500: oklch(64.3% 0 0);
 
+  /* Hero buttons */
   --color-pink-500: oklch(65.1% 0.253 8.5);
   --color-purple-500: oklch(55.5% 0.239 328);
 
@@ -17,11 +18,9 @@
   --color-nav-text: var(--color-white);
   --color-nav-active: var(--color-pink-500);
 
-  /* ==== Spacing ==== */
+  /* ==== SPACING ==== */
 
-  /* ==== Typography ==== */
-  --font-ubuntu: "Ubuntu", sans-serif;
-
+  /* ==== TYPOGRAPHY ==== */
   /* Navigation*/
   --font-size-nav: 1.5rem; /* 24px */
   --letter-spacing-nav: 0.02em;
