@@ -1,13 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Ubuntu } from "next/font/google";
+import "./styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ubuntu = Ubuntu({
+  weight: ["400", "500"],
   subsets: ["latin"],
 });
 
@@ -18,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={ubuntu.className}>{children}</body>
     </html>
   );
 }

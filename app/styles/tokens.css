@@ -1,0 +1,43 @@
+:root {
+  /* ==== Colors ==== */
+  /* PRIMITIVES */
+  --color-black: oklch(0% 0 0);
+  --color-white: oklch(100% 0 0);
+  --color-gray-400: oklch(81.5% 0 0);
+  --color-gray-500: oklch(64.3% 0 0);
+
+  --color-pink-500: oklch(65.1% 0.253 8.5);
+  --color-purple-500: oklch(55.5% 0.239 328);
+
+  /* Tokens*/
+  --color-text: var(--color-white);
+  --color-muted: var(--color-gray-400);
+
+  /* Navigation*/
+  --color-nav-text: var(--color-white);
+  --color-nav-active: var(--color-pink-500);
+
+  /* ==== Spacing ==== */
+
+  /* ==== Typography ==== */
+  --font-ubuntu: "Ubuntu", sans-serif;
+
+  /* Navigation*/
+  --font-size-nav: 1.5rem; /* 24px */
+  --letter-spacing-nav: 0.02em;
+
+  /* Buttons */
+  --font-size-button: 1.125rem; /* 18px */
+  --letter-spacing-button: 0.02em;
+
+  /* Headings */
+  --font-size-heading: 2.375rem; /* 38px*/
+  --font-weight-medium: 500;
+  --letter-spacing-heading: 0.075em;
+
+  /* Paragraph (p) */
+  --font-size-body: 1.125rem; /* 18px */
+  --font-weight-regular: 400;
+  --line-height-body: 2rem; /* 32px */
+  --letter-spacing-body: 0.02em;
+}
