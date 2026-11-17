@@ -14,29 +14,26 @@
   --color-text: var(--color-white);
   --color-muted: var(--color-gray-400);
 
-  /* Navigation*/
+  /* Navigation */
   --color-nav-text: var(--color-white);
   --color-nav-active: var(--color-pink-500);
 
   /* ==== SPACING ==== */
 
   /* ==== TYPOGRAPHY ==== */
-  /* Navigation*/
-  --font-size-nav: 1.5rem; /* 24px */
-  --letter-spacing-nav: 0.02em;
+  /* Font sizes */
+  --font-size-sm: 1.125rem; /* 18px */
+  --font-size-md: 1.5rem; /* 24px */
+  --font-size-lg: 2.375rem; /* 38px */
 
-  /* Buttons */
-  --font-size-button: 1.125rem; /* 18px */
-  --letter-spacing-button: 0.02em;
-
-  /* Headings */
-  --font-size-heading: 2.375rem; /* 38px*/
-  --font-weight-medium: 500;
-  --letter-spacing-heading: 0.075em;
-
-  /* Paragraph (p) */
-  --font-size-body: 1.125rem; /* 18px */
+  /* Font weights */
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* Letter spacing */
+  --letter-spacing-normal: 0.02em; /* 2% */
+  --letter-spacing-wide: 0.075em; /* 7.5% */
+
+  /* Line height */
   --line-height-body: 2rem; /* 32px */
-  --letter-spacing-body: 0.02em;
 }
