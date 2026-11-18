@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 /* Navigation */
 const Header = () => {
+  const pathname = usePathname();
   return (
     <header className="relative flex items-center justify-between px-4 py-5 border-t border-b border-(--color-pink-500)">
       <div className="absolute top-0 left-0 w-8 h-8 bg-(--color-pink-500) [clip-path:polygon(0_0,_100%_0,_0_100%)]"></div>
@@ -29,11 +33,47 @@ const Header = () => {
           <span className="w-full h-1 bg-(--color-white)"></span>
         </button>
 
-        <div className="hidden lg:flex gap-8 lg:mr-20">
-          <a href="#">Home</a>
-          <a href="#">Events</a>
-          <a href="#">Book Table</a>
-          <a href="#">Contact Us</a>
+        <div className="hidden lg:flex gap-8 lg:mr-20 lg:text-2xl">
+          <a
+            href="/"
+            className={
+              pathname === "/"
+                ? "text-(--color-pink-500)"
+                : "text-(--color-white)"
+            }
+          >
+            Home
+          </a>
+          <a
+            href="/events"
+            className={
+              pathname === "/events"
+                ? "text-(--color-pink-500)"
+                : "text-(--color-white)"
+            }
+          >
+            Events
+          </a>
+          <a
+            href="/book-table"
+            className={
+              pathname === "/book-table"
+                ? "text-(--color-pink-500)"
+                : "text-(--color-white)"
+            }
+          >
+            Book Table
+          </a>
+          <a
+            href="/contact"
+            className={
+              pathname === "/contact"
+                ? "text-(--color-pink-500)"
+                : "text-(--color-white)"
+            }
+          >
+            Contact Us
+          </a>
         </div>
         <div
           id="burger-menu"
