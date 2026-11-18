@@ -1,10 +1,10 @@
 export default function EventHero (){
     return(
     <section className="hero">
-    <h1>EVENTS</h1>
+    <h1>EVENTS </h1>
     <div className="hero-image">
         <img src="/assets/bg/footerbg.jpg" alt="hero background"
-        className="brightness-25"/>
+        className="brightness-25 "/>
     </div>
 
     <div className="hero-pattern"> 

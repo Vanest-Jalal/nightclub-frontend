@@ -1,5 +1,5 @@
-import EventHero from "../components/EVENTS/EventHero";
-import EventCard from "../components/EVENTS/EventCard";
+import EventHero from "../../components/shared/events/EventHero";
+import EventCard from "../../components/shared/events/EventCard";
 
 export default async function EventsPage() {
 
