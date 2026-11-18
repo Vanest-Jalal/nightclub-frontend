@@ -1,6 +1,6 @@
 import { Ubuntu } from "next/font/google";
 import "./styles/globals.css";
-import Header from "../components/Header";
+import Header from "../components/shared/Header";
 
 const ubuntu = Ubuntu({
   weight: ["400", "500"],
