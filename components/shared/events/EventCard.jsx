@@ -6,7 +6,7 @@ export default function EventCard({ events }) {
             <div className="event-card-content">
                 <h2>{events.title}</h2>
                  <p>{events.excerpt}</p>
-                 <p> {events.description}</p>
+                 <p> {events.description}</p> </div>
 
 
             

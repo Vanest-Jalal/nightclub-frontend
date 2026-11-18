@@ -1,15 +1,15 @@
 export default function EventHero (){
     return(
-    <section className="hero">
-    <h1>EVENTS </h1>
-    <div className="hero-image">
-        <img src="/assets/bg/footerbg.jpg" alt="hero background"
-        className="brightness-25 "/>
-    </div>
+    <section className="relative h-20">
 
-    <div className="hero-pattern"> 
-        <img src="/assets/bottom_line2.png" alt="hero line"/>
-    </div>
+        <img src="/assets/bg/footerbg.jpg" 
+        alt=" Event hero background"
+        className=" w-full h-full object-cover brightness-15 "/>
+
+
+<h1 className="absolute inset-0 flex items-center justify-center">
+    EVENTS</h1>
+
     </section>
     )
 }
