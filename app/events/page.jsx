@@ -12,7 +12,7 @@ export default async function EventsPage() {
     return (
         <div>
             <EventHero />
-            <EventCard events={event[0]} />
+            {/*<EventCard events={event[0]} />*/}
         </div>
     );
 }

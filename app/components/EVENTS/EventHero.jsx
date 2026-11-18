@@ -3,7 +3,8 @@ export default function EventHero (){
     <section className="hero">
     <h1>EVENTS</h1>
     <div className="hero-image">
-        <img src="/assets/bg/footerbg.jpg" alt="hero background"/>
+        <img src="/assets/bg/footerbg.jpg" alt="hero background"
+        className="brightness-25"/>
     </div>
 
     <div className="hero-pattern"> 
