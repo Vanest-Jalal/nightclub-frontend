@@ -1,16 +1,16 @@
 :root {
   /* ==== COLORS ==== */
+
   /* Primitives */
   --color-black: oklch(0% 0 0);
   --color-white: oklch(100% 0 0);
   --color-gray-400: oklch(81.5% 0 0);
   --color-gray-500: oklch(64.3% 0 0);
 
-  /* Hero buttons */
   --color-pink-500: oklch(65.1% 0.253 8.5);
   --color-purple-500: oklch(55.5% 0.239 328);
 
-  /* Tokens*/
+  /* Semantic colors */
   --color-text: var(--color-white);
   --color-muted: var(--color-gray-400);
 
@@ -19,21 +19,34 @@
   --color-nav-active: var(--color-pink-500);
 
   /* ==== SPACING ==== */
+  /* Tilføjes ud fra Figma */
 
-  /* ==== TYPOGRAPHY ==== */
+  /* ==== TYPOGRAFI - MOBILE ==== */
+
   /* Font sizes */
-  --font-size-sm: 1.125rem; /* 18px */
-  --font-size-md: 1.5rem; /* 24px */
-  --font-size-lg: 2.375rem; /* 38px */
+  --font-size-h1: 2rem; /* 32px */
+  --font-size-h2: 1.5rem; /* 24px */
+  --font-size-event-meta: 1.125rem; /* 18px */
+  --font-size-body: 1rem; /* 16px */
 
   /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 
   /* Letter spacing */
-  --letter-spacing-normal: 0.02em; /* 2% */
-  --letter-spacing-wide: 0.075em; /* 7.5% */
+  --letter-spacing-normal: 0.02em;
+  --letter-spacing-wide: 0.075em;
 
   /* Line height */
-  --line-height-body: 2rem; /* 32px */
+  --line-height-body: 1.5rem; /* 24px */
+}
+
+/* ==== TYPOGRAFI - DESKTOP ==== */
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-h1: 2.375rem; /* 38px */
+    --font-size-body: 1.125rem; /* 18px */
+    --line-height-body: 2rem; /* 32px */
+  }
 }
