@@ -7,7 +7,7 @@ export default function EventHero (){
     </div>
 
     <div className="hero-pattern"> 
-        <img src="/assets/bottom-line2.png" alt="hero line"/>
+        <img src="/assets/bottom_line2.png" alt="hero line"/>
     </div>
     </section>
     )
