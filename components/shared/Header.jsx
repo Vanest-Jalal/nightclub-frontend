@@ -16,17 +16,25 @@ const Header = () => {
           alt="Logo"
           width={189}
           height={46}
+          className="lg:ml-20"
         />
         <button
           type="button"
           aria-label="Toggle menu"
           popoverTarget="burger-menu"
-          className="ml-auto flex flex-col gap-2 w-11 h-8 group-has-[#burger-menu:popover-open]:hidden"
+          className="ml-auto flex flex-col gap-2 w-11 h-8 group-has-[#burger-menu:popover-open]:hidden lg:hidden"
         >
           <span className="w-full h-1 bg-(--color-white)"></span>
           <span className="w-full h-1 bg-(--color-white)"></span>
           <span className="w-full h-1 bg-(--color-white)"></span>
         </button>
+
+        <div className="hidden lg:flex gap-8 lg:mr-20">
+          <a href="#">Home</a>
+          <a href="#">Events</a>
+          <a href="#">Book Table</a>
+          <a href="#">Contact Us</a>
+        </div>
         <div
           id="burger-menu"
           popover="auto"
