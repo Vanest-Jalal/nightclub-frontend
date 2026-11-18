@@ -1,12 +1,10 @@
 @import "tailwindcss";
 @import "./tokens.css";
-@import "tailwindcss";
 
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: var(--color-black);
   color: var(--color-text);
-  background: var(--color-black);
 }
 
 a {
@@ -32,6 +30,7 @@ a {
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--letter-spacing-normal);
   }
+
   /* h3 {
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-medium);
