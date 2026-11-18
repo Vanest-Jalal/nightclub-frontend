@@ -10,7 +10,13 @@
   --color-pink-500: oklch(65.1% 0.253 8.5);
   --color-purple-500: oklch(55.5% 0.239 328);
 
-  /* Semantic colors */
+  --gradient-hero: linear-gradient(
+    118deg,
+    var(--color-pink-500) 7.75%,
+    var(--color-purple-500) 98.44%
+  );
+
+  /* Tokens*/
   --color-text: var(--color-white);
   --color-muted: var(--color-gray-400);
 
