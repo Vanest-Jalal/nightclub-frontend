@@ -1,5 +1,4 @@
-import EventHero from "../../components/shared/events/EventHero";
-import EventCard from "../../components/shared/events/EventCard";
+import PageHero from "../../components/shared/PageHero";
 
 export default async function EventsPage() {
 
@@ -11,7 +10,7 @@ export default async function EventsPage() {
 
     return (
         <div>
-            <EventHero />
+            <PageHero pageTitle="EVENTS" />
             {/*<EventCard events={event[0]} />*/}
         </div>
     );
