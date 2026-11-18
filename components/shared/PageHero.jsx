@@ -3,7 +3,7 @@ export default function PageHero ({pageTitle}) {
     <section className="relative h-20 h-20 lg:h-[272px] ">
 
         <img src="/assets/bg/footerbg.jpg" 
-        alt=" Event hero background"
+        alt=" hero background"
         className=" w-full h-full object-cover brightness-15 "/>
 
 
