@@ -1,28 +1,29 @@
-"use client";
-
-const BookingForm = () => {
+const BookingForm = ({ selectedTable }) => {
   return (
-    <form>
+    <form className="flex flex-col gap-5 px-3">
       <input
         type="text"
         name="name"
         placeholder="Your Name"
         required
-        className="w-full border border-gray-500 p-3 text-white"
+        className=" border p-3 mt-5 ml-3 mr-3 placeholder:text-white"
       />
+
       <input
         type="email"
         name="email"
         placeholder="Your Email"
         required
-        className="w-full border border-gray-500 p-3 text-white"
+        className="border p-3 my-2 ml-3 mr-3 placeholder:text-white"
       />
       <input
+        value={selectedTable ?? ""}
         type="number"
         name="table"
         placeholder="Table Number"
         required
-        className="w-full border border-gray-500 p-3 text-white"
+        readOnly
+        className="border p-3 my-2 ml-3 mr-3 placeholder:text-white"
       />
 
       <input
@@ -31,7 +32,7 @@ const BookingForm = () => {
         placeholder="Number of Guests"
         min="1"
         required
-        className="w-full border border-gray-500 p-3 text-white"
+        className="border p-3 my-2 ml-3 mr-3 placeholder:text-white"
       />
 
       {/* choose your night */}
@@ -41,16 +42,18 @@ const BookingForm = () => {
         name="phone"
         placeholder="Your Contact Number"
         required
-        className="w-full border border-gray-500 p-3 text-white"
+        className="border p-3 my-2 ml-3 mr-3 placeholder:text-white"
       />
+
       <textarea
         type="text"
         name="your-comment"
         placeholder="Your Comment"
         required
-        className="w-full border border-gray-500 p-3 text-white"
+        className="border p-3 my-2 ml-3 mr-3 placeholder:text-white"
       />
-      <button type="submit" className="border">
+
+      <button type="submit" className="place-self-end border-y my-2 mr-4>">
         RESERVE
       </button>
     </form>

@@ -1,11 +1,11 @@
 import Image from "next/image";
-import BookingForm from "@/components/Booking/BookingForm";
+import BookingClient from "@/components/Booking/BookingClient";
 
 export default function BookingPage() {
   return (
     <main>
-      <h1>BOOK TABLE</h1>
-      <BookingForm />
+      <h1 className="my-3 ml-5">BOOK TABLE</h1>
+      <BookingClient />
     </main>
   );
 }
