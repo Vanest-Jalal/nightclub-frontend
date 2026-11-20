@@ -1,6 +1,7 @@
 import { Ubuntu } from "next/font/google";
 import "./styles/globals.css";
 import Header from "../components/shared/Header";
+import Footer from "../components/shared/Footer";
 
 const ubuntu = Ubuntu({
   weight: ["400", "500"],
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={ubuntu.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
