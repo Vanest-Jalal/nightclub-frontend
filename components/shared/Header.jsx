@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 /* Navigation */
 const Header = () => {
   const pathname = usePathname();
+
   return (
     <header className="relative flex items-center justify-between px-4 py-5 border-t border-b border-(--color-pink-500)">
       <div className="absolute top-0 left-0 w-8 h-8 bg-(--color-pink-500) [clip-path:polygon(0_0,_100%_0,_0_100%)]"></div>
@@ -13,7 +14,7 @@ const Header = () => {
 
       <nav
         aria-label="Main navigation"
-        className="flex w-full items-center justify-between group"
+        className="flex w-full items-center justify-between"
       >
         <Image
           src="/assets/Logo.png"
@@ -36,43 +37,107 @@ const Header = () => {
         <div className="hidden lg:flex gap-8 lg:mr-20 lg:text-2xl">
           <a
             href="/"
-            className={
+            className={`group ${
               pathname === "/"
                 ? "text-(--color-pink-500)"
                 : "text-(--color-white)"
-            }
+            }`}
           >
-            Home
+            <span className="block h-7 overflow-hidden">
+              <span
+                className={`block transition-transform duration-300 ${pathname === "/" ? "" : "group-hover:-translate-y-7"}`}
+              >
+                <span
+                  className={`block ${pathname === "/" ? "text-(--color-pink-500)" : "text-(--color-white)"}`}
+                >
+                  Home
+                </span>
+                <span className="block text-(--color-pink-500)">
+                  Home
+                </span>
+              </span>
+            </span>
+            <span
+              className={`block w-8 h-px bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent mx-auto m-2 group-hover:scale-x-100 ${pathname === "/" ? "scale-x-100" : "scale-x-0"}`}
+            ></span>
           </a>
           <a
             href="/events"
-            className={
+            className={`group ${
               pathname === "/events"
                 ? "text-(--color-pink-500)"
                 : "text-(--color-white)"
-            }
+            }`}
           >
-            Events
+            <span className="block h-7 overflow-hidden">
+              <span
+                className={`block transition-transform duration-300 ${pathname === "/events" ? "" : "group-hover:-translate-y-7"}`}
+              >
+                <span
+                  className={`block ${pathname === "/events" ? "text-(--color-pink-500)" : "text-(--color-white)"}`}
+                >
+                  Events
+                </span>
+                <span className="block text-(--color-pink-500)">
+                  Events
+                </span>
+              </span>
+            </span>
+            <span
+              className={`block w-8 h-px bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent mx-auto m-2 group-hover:scale-x-100 ${pathname === "/events" ? "scale-x-100" : "scale-x-0"}`}
+            ></span>
           </a>
           <a
             href="/book-table"
-            className={
+            className={`group ${
               pathname === "/book-table"
                 ? "text-(--color-pink-500)"
                 : "text-(--color-white)"
-            }
+            }`}
           >
-            Book Table
+            <span className="block h-7 overflow-hidden">
+              <span
+                className={`block transition-transform duration-300 ${pathname === "/book-table" ? "" : "group-hover:-translate-y-7"}`}
+              >
+                <span
+                  className={`block ${pathname === "/book-table" ? "text-(--color-pink-500)" : "text-(--color-white)"}`}
+                >
+                  Book Table
+                </span>
+                <span className="block text-(--color-pink-500)">
+                  Book Table
+                </span>
+              </span>
+            </span>
+            <span
+              className={`block w-8 h-px bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent mx-auto m-2 group-hover:scale-x-100 ${pathname === "/book-table" ? "scale-x-100" : "scale-x-0"}`}
+            ></span>
           </a>
           <a
             href="/contact"
-            className={
+            className={`group ${
               pathname === "/contact"
                 ? "text-(--color-pink-500)"
                 : "text-(--color-white)"
-            }
+            }`}
           >
-            Contact Us
+            <span className="block h-7 overflow-hidden">
+              <span
+                className={`block transition-transform duration-300 ${pathname === "/contact" ? "" : "group-hover:-translate-y-7"}`}
+              >
+                <span
+                  className={`block ${pathname === "/contact" ? "text-(--color-pink-500)" : "text-(--color-white)"}`}
+                >
+                  Contact Us
+                </span>
+                <span className="block text-(--color-pink-500)">
+                  Contact Us
+                </span>
+              </span>
+            </span>
+            <span
+              className={`block w-8 h-px bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent mx-auto m-2 group-hover:scale-x-100 ${pathname === "/contact" ? "scale-x-100" : "scale-x-0"}`}
+            ></span>
           </a>
         </div>
         <div
