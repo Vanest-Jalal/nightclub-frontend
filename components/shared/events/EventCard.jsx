@@ -46,6 +46,11 @@ export default function EventCard({ events }) {
                           
                            <p className="text-gray-400 mb-8">
                             {event.description}</p>
+
+
+                            <Link href={`/events/${event.slug}`} className=" flex w-45 h-[61px] mx-auto items-center justify-center mb-20 border-y py-5 border-y-2">
+                            READ MORE
+                    </Link>
                     </div>
                     </article>
                             )
