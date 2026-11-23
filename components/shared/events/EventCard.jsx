@@ -1,6 +1,7 @@
 import Link from "next/link";
+import AnimatedButton from "./AnimatedButton";
 export default function EventCard({ events }) {
-   
+
             const eventImages = [
                 "/assets/content-img/blog_full1.jpg",
                 "/assets/content-img/blog_full2.jpg",
@@ -46,11 +47,13 @@ export default function EventCard({ events }) {
                           
                            <p className="text-gray-400 mb-8">
                             {event.description}</p>
-
-
-                            <Link href={`/events/${event.slug}`} className=" flex w-45 h-[61px] mx-auto items-center justify-center mb-20 border-y py-5 border-y-2">
+                            
+                            
+                            <AnimatedButton><Link href={`/events/${event.slug}`} 
+                            className="flex h-[61px] mb-31 mx-auto items-center justify-center transition-colors duration-300 hover:!text-pink-500">
                             READ MORE
-                    </Link>
+                            </Link>
+                            </AnimatedButton>
                     </div>
                     </article>
                             )
