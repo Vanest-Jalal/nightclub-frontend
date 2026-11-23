@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NewsItem from "./NewsItem";
 
 const Footer = () => {
   const socialIcons = [
@@ -15,39 +16,61 @@ const Footer = () => {
     >
       <div className="absolute inset-0 bg-black/90"></div>
       <div className="relative z-10 pt-12 lg:px-24">
-        <Image
-          src="/assets/Logo.png"
-          alt="Logo"
-          width={189}
-          height={46}
-          className="m-auto mb-12 lg:ml-0"
-        />
-        <div className="text-center space-y-8 lg:text-left">
-          <div>
-            <h2 className="mb-2 uppercase text-(--color-pink-500)">
-              Location
-            </h2>
-            <address className="text-(length:--font-size-body)">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+          <div className="text-center space-y-8 lg:text-left">
+            <div>
+              <Image
+                src="/assets/Logo.png"
+                alt="Logo"
+                width={189}
+                height={46}
+                className="m-auto mb-12 lg:ml-0"
+              />
+              <h2 className="mb-2 uppercase text-(--color-pink-500)">
+                Location
+              </h2>
+              <address className="text-(length:--font-size-body)">
+                <span className="block">
+                  Kompagnistræde 278
+                </span>
+                <span className="block">
+                  1265 København K
+                </span>
+              </address>
+            </div>
+            <div className="space-y-2 uppercase text-(length:--font-size-body)">
+              <h2 className="text-(--color-pink-500)">
+                Opening hours
+              </h2>
               <span className="block">
-                Kompagnistræde 278
+                wed - thu 10:30 PM TO 3 AM
               </span>
               <span className="block">
-                1265 København K
+                sat - sun: 11 PM TO 5 AM
               </span>
-            </address>
+            </div>
           </div>
-          <div className="space-y-2 uppercase text-(length:--font-size-body)">
-            <h2 className="text-(--color-pink-500)">
-              Opening hours
+
+          <div className="hidden lg:block">
+            <h2 className="mb-8 uppercase text-(--color-pink-500)">
+              News
             </h2>
-            <span className="block">
-              wed - thu 10:30 PM TO 3 AM
-            </span>
-            <span className="block">
-              sat - sun: 11 PM TO 5 AM
-            </span>
+            <div className="space-y-8">
+              <NewsItem
+                image="/assets/content-img/recent_post1.jpg"
+                text="Lorem Ipsum is simply dummy text of the printing and typesetting."
+                date="April 17, 2026"
+              />
+
+              <NewsItem
+                image="/assets/content-img/recent_post2.jpg"
+                text="Lorem Ipsum is simply dummy text of the printing and typesetting."
+                date="April 17, 2026"
+              />
+            </div>
           </div>
         </div>
+
         <div className="mt-16 grid text-center text-(--color-gray-500) lg:text-left lg:grid-cols-3 lg:mb-8 lg:items-end">
           <div className="mt-8 lg:mt-0 lg:flex lg:items-center lg:mb-3">
             <p>Night Club</p>
