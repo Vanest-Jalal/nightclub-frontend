@@ -8,14 +8,20 @@ export default async function EventsPage({ searchParams }) {
     const response = await fetch (
         `${process.env.NEXT_PUBLIC_API_URL}/events?_page=${currentPage}&_limit=3`,
     );
-    const event = await response.json();
-    console.log(event);
+    const events = await response.json();
+   
 
     return (
         <div>
             <PageHero pageTitle="EVENTS" />
-            <EventCard events={event} />
+            
+            <div className="w-full h-5 bg-[url('/assets/bg/pattern_small.jpg')] brightness-125">
+                 </div>
+
+            <EventCard events={events} />
+
             <Pagination currentPage={currentPage} />
+            <div className="w-full h-34 bg-[url('/assets/bg/pattern_bg.jpg')] brightness-125 "></div>
         </div>
     );
 }
