@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NewsItem from "./NewsItem";
+import RecentPost from "./RecentPost";
 
 const Footer = () => {
   const socialIcons = [
@@ -15,7 +16,7 @@ const Footer = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/90"></div>
-      <div className="relative z-10 pt-12 lg:px-24">
+      <div className="relative z-10 pt-12 lg:px-14">
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           <div className="text-center space-y-8 lg:text-left">
             <div>
@@ -51,22 +52,41 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block">
-            <h2 className="mb-8 uppercase text-(--color-pink-500)">
-              News
-            </h2>
-            <div className="space-y-8">
-              <NewsItem
-                image="/assets/content-img/recent_post1.jpg"
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting."
-                date="April 17, 2026"
-              />
+          <div className="hidden lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-8">
+            <div>
+              <h2 className="mb-8 uppercase text-(--color-pink-500)">
+                News
+              </h2>
+              <div className="space-y-14">
+                <NewsItem
+                  image="/assets/content-img/recent_post1.jpg"
+                  text="Lorem Ipsum is simply dummy text of the printing and typesetting."
+                  date="April 17, 2026"
+                />
 
-              <NewsItem
-                image="/assets/content-img/recent_post2.jpg"
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting."
-                date="April 17, 2026"
-              />
+                <NewsItem
+                  image="/assets/content-img/recent_post2.jpg"
+                  text="Lorem Ipsum is simply dummy text of the printing and typesetting."
+                  date="April 17, 2026"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="mb-8 uppercase text-(--color-pink-500)">
+                Recent Posts
+              </h2>
+              <div className="space-y-20">
+                <RecentPost
+                  image="/assets/icon/x.svg"
+                  text="It is a long established fact that a reader will be distracted by the readable..."
+                  time="5 hours ago"
+                />
+                <RecentPost
+                  image="/assets/icon/x.svg"
+                  text="It is a long established fact that a reader will be distracted by the readable..."
+                  time="5 hours ago"
+                />
+              </div>
             </div>
           </div>
         </div>
