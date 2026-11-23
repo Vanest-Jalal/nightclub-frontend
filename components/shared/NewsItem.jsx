@@ -5,7 +5,7 @@ const NewsItem = ({ image, text, date }) => {
     <div className="flex gap-4">
       <Image
         src={image}
-        alt="Recent post"
+        alt="News"
         width={120}
         height={120}
         className="object-cover shrink-0"
