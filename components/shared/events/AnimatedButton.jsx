@@ -17,7 +17,7 @@ const Pinkvariants = {
   return (
     
     <motion.div
-      className="relative w-45 mx-auto "
+      className="relative w-45 mx-auto lg:mr-0 lg:mt-30"
       initial= "hidden"
       whileHover= "visible"
   

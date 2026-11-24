@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Pagination( { currentPage}) {
     return (
-        <nav className="h-34 flex items-center justify-center gap-3">
+        <nav className="flex items-center justify-center gap-3 lg:absolute lg:top-36.5 lg:w-full lg:z-10">
             
-            <div className="w-20">
+            <div className="w-20 ">
                {currentPage > 1 && (
                 <Link href={`/events?page=${currentPage - 1}`}>
                     {"<"} Previous</Link>

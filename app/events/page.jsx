@@ -15,13 +15,15 @@ export default async function EventsPage({ searchParams }) {
         <div>
             <PageHero pageTitle="EVENTS" />
             
-            <div className="w-full h-5 bg-[url('/assets/bg/pattern_small.jpg')] brightness-125">
+            <div className="h-5 bg-[url('/assets/bg/pattern_small.jpg')] brightness-125 lg:h-26">
                  </div>
 
             <EventCard events={events} />
 
+            <div className="relative">
             <Pagination currentPage={currentPage} />
-            <div className="w-full h-34 bg-[url('/assets/bg/pattern_bg.jpg')] brightness-125 "></div>
+            <div className="w-full h-34 bg-[url('/assets/bg/pattern_bg.jpg')] brightness-125 lg:h-66.5"></div>
+        </div>
         </div>
     );
 }
