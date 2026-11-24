@@ -8,7 +8,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="relative flex items-center justify-between px-4 py-5 border-t border-b border-(--color-pink-500)">
+    <header className="sticky top-0 flex items-center justify-between px-4 py-5 bg-(--color-black) border-t border-b border-(--color-pink-500)">
       <div className="absolute top-0 left-0 w-8 h-8 bg-(--color-pink-500) [clip-path:polygon(0_0,_100%_0,_0_100%)]"></div>
       <div className="absolute bottom-0 right-0 w-8 h-8 bg-(--color-pink-500) [clip-path:polygon(100%_0,100%_100%,0_100%)]"></div>
 

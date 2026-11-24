@@ -1,7 +1,12 @@
+import Header from "../components/shared/Header";
+
 export default async function Home() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/events`, {
-    cache: "no-store",
-  });
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/events`,
+    {
+      cache: "no-store",
+    },
+  );
 
   if (!response.ok) {
     throw new Error("Kunne ikke hente events");
@@ -10,9 +15,10 @@ export default async function Home() {
   const events = await response.json();
 
   return (
-    <main style={{ padding: "40px" }}>
+    <main>
+      <section className="h-screen bg-[url(/assets/bg/header_bg_2.jpg)] bg-cover bg-center"></section>
+      <Header />
       <h1>Nightclub Events</h1>
-
       {events.map((event) => (
         <div key={event.id}>
           <h2>{event.title}</h2>

@@ -1,6 +1,6 @@
 import { Ubuntu } from "next/font/google";
 import "./styles/globals.css";
-import Header from "../components/shared/Header";
+import ConditionalHeader from "../components/shared/ConditionalHeader";
 import Footer from "../components/shared/Footer";
 
 const ubuntu = Ubuntu({
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={ubuntu.className}>
-        <Header />
+        <ConditionalHeader />
         {children}
         <Footer />
       </body>
