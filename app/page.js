@@ -53,6 +53,38 @@ export default async function Home() {
         </div>
       </section>
       <Header />
+
+      <section className="py-12 px-6 bg-[url(/assets/bg/pattern_small.jpg)]">
+        <h2 className="uppercase text-center text-(length:--font-size-h1) tracking-(--letter-spacing-wide)">
+          Welcome In Nightclub
+        </h2>
+        <div className="bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent w-[99px] h-0.5 mx-auto mt-3"></div>
+
+        <div className="flex flex-col gap-6 mt-14">
+          <Image
+            src="/assets/content-img/thumb1.jpg"
+            alt="Set dining table with food and drinks"
+            width={370}
+            height={474}
+            className="w-full"
+          />
+          <Image
+            src="/assets/content-img/reastaurant_1.jpg"
+            alt="Waiter serving food"
+            width={360}
+            height={461}
+            className="w-full"
+          />
+          <Image
+            src="/assets/content-img/thumb2.jpg"
+            alt="People at a nightclub bar"
+            width={370}
+            height={474}
+            className="w-full"
+          />
+        </div>
+      </section>
+
       <h1>Nightclub Events</h1>
       {events.map((event) => (
         <div key={event.id}>
