@@ -1,7 +1,29 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import AnimatedButton from "./AnimatedButton";
 
-export default function EventCard({ events }) {
+const EventList = ({ currentPage }) => {
+    return (
+        <Suspense fallback={<div>Loading events...</div>}>
+            <FetchEvents currentPage={currentPage} />
+            </Suspense>
+    );
+};
+
+const FetchEvents = async ({ currentPage}) => {
+    let events;
+
+try {
+    const response = await fetch (`${process.env.NEXT_PUBLIC_API_URL}/events?_page=${currentPage}&_limit=3`);
+    if(!response.ok){
+        throw new Error("Could not get events")
+    }
+    events = await response.json();
+    } catch (error) {
+
+        return <p>Could not get events</p>
+    }
+
   const eventImages = [
     "/assets/content-img/blog_full1.jpg",
     "/assets/content-img/blog_full2.jpg",
@@ -64,4 +86,6 @@ export default function EventCard({ events }) {
       })}
     </section>
   );
-}
+};
+
+export default EventList;
