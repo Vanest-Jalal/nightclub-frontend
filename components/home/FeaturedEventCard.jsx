@@ -25,8 +25,10 @@ export default function FeaturedEventCard({ event }) {
         <span>{formattedTime}</span>
         <span>{event.location}</span>
       </div>
-      <h3>{event.title}</h3>
-      <p>{event.excerpt}</p>
+      <h3 className="text-(length:--font-size-h2) font-(--font-weight-medium) mt-4">
+        {event.title}
+      </h3>
+      <p className="mt-2">{event.excerpt}</p>
     </article>
   );
 }
