@@ -26,10 +26,6 @@ const CommentForm = () => {
             </button>
             
         </form>
-        
-
-
-
     )
 }
 
