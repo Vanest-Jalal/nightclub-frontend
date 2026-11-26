@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/shared/Header";
+import FeaturedEvents from "../components/home/FeaturedEvents";
 
 export default async function Home() {
   const response = await fetch(
@@ -15,6 +16,9 @@ export default async function Home() {
   }
 
   const events = await response.json();
+  const featuredEvents = events.filter(
+    (event) => event.isFeatured === true,
+  );
 
   return (
     <main>
@@ -84,6 +88,8 @@ export default async function Home() {
           />
         </div>
       </section>
+
+      <FeaturedEvents featuredEvents={featuredEvents} />
 
       <h1>Nightclub Events</h1>
       {events.map((event) => (
