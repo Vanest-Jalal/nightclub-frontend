@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/shared/Header";
 import FeaturedEvents from "../components/home/FeaturedEvents";
+import Gallery from "../components/home/Gallery";
 
 export default async function Home() {
   const response = await fetch(
@@ -19,6 +20,19 @@ export default async function Home() {
   const featuredEvents = events.filter(
     (event) => event.isFeatured === true,
   );
+
+  const galleryResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/gallery`,
+    {
+      cache: "no-store",
+    },
+  );
+
+  if (!galleryResponse.ok) {
+    throw new Error("Kunne ikke hente galleri");
+  }
+
+  const gallery = await galleryResponse.json();
 
   return (
     <main>
@@ -90,6 +104,8 @@ export default async function Home() {
       </section>
 
       <FeaturedEvents featuredEvents={featuredEvents} />
+
+      <Gallery gallery={gallery} />
     </main>
   );
 }
