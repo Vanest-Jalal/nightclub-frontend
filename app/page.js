@@ -90,14 +90,6 @@ export default async function Home() {
       </section>
 
       <FeaturedEvents featuredEvents={featuredEvents} />
-
-      <h1>Nightclub Events</h1>
-      {events.map((event) => (
-        <div key={event.id}>
-          <h2>{event.title}</h2>
-          <p>{event.excerpt}</p>
-        </div>
-      ))}
     </main>
   );
 }
