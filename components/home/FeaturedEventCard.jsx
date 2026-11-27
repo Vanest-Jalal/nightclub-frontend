@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedEventCard({ event }) {
   const date = new Date(event.date);
@@ -29,6 +30,12 @@ export default function FeaturedEventCard({ event }) {
         {event.title}
       </h3>
       <p className="mt-2">{event.excerpt}</p>
+      <Link
+        href={`/booking?eventId=${event.id}`}
+        className="inline-block bg-(--color-pink-500) text-(--color-white) px-6 py-3 mt-4"
+      >
+        Book Now
+      </Link>
     </article>
   );
 }
