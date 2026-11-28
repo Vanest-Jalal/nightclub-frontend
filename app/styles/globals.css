@@ -7,11 +7,6 @@ body {
   color: var(--color-text);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 @theme inline {
   --color-background: var(--color-black);
   --color-primary: var(--color-pink-500);
