@@ -4,6 +4,7 @@ import Header from "../components/shared/Header";
 import SectionHeading from "../components/shared/SectionHeading";
 import FeaturedEvents from "../components/home/FeaturedEvents";
 import Gallery from "../components/home/Gallery";
+import MusicPlayer from "../components/home/MusicPlayer";
 
 /* Forside */
 export default async function Home() {
@@ -112,6 +113,9 @@ export default async function Home() {
 
       {/* Galleri */}
       <Gallery gallery={gallery} />
+
+      {/* Musikafspiller */}
+      <MusicPlayer />
     </main>
   );
 }
