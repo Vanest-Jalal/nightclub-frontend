@@ -35,6 +35,7 @@
   --font-size-nav: 1.25rem; /* 20px */
   --font-size-event-meta: 1.125rem; /* 18px */
   --font-size-body: 1rem; /* 16px */
+  --font-size-hero-tagline: 0.8125; /* 13px */
 
   /* Font weights */
   --font-weight-regular: 400;
@@ -43,6 +44,7 @@
   /* Letter spacing */
   --letter-spacing-normal: 0.02em;
   --letter-spacing-wide: 0.075em;
+  --letter-spacing-hero-tagline: 1em;
 
   /* Line height */
   --line-height-body: 1.5rem; /* 24px */

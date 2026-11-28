@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/shared/Header";
+import SectionHeading from "../components/shared/SectionHeading";
 import FeaturedEvents from "../components/home/FeaturedEvents";
 import Gallery from "../components/home/Gallery";
 
+/* Forside */
 export default async function Home() {
+  /* Events */
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/events`,
     {
@@ -21,6 +24,7 @@ export default async function Home() {
     (event) => event.isFeatured === true,
   );
 
+  /* Galleri */
   const galleryResponse = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/gallery`,
     {
@@ -36,8 +40,9 @@ export default async function Home() {
 
   return (
     <main>
+      {/* Hero */}
       <section className="relative h-screen bg-[url(/assets/bg/header_bg_2.jpg)] bg-cover bg-center flex flex-col items-center justify-center">
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-(--color-black)/60"></div>
         <Image
           src="/assets/icon/Logo.svg"
           alt="Logo"
@@ -45,7 +50,7 @@ export default async function Home() {
           height={50}
           className="z-10"
         />
-        <p className="uppercase z-10 text-(--color-white) tracking-[1em] text-[0.825rem] mt-4">
+        <p className="uppercase z-10 text-(--color-white) tracking-(--letter-spacing-hero-tagline) text-(length:--font-size-hero-tagline) mt-4">
           Have A Good Time
         </p>
         <Image
@@ -63,7 +68,7 @@ export default async function Home() {
             View Events
           </Link>
           <Link
-            href="/book-table"
+            href="/booking"
             className="uppercase border px-3 py-2 bg-[image:var(--gradient-hero)]"
           >
             Book Table
@@ -72,11 +77,10 @@ export default async function Home() {
       </section>
       <Header />
 
+      {/* Welcome */}
       <section className="py-12 px-6 bg-[url(/assets/bg/pattern_small.jpg)]">
-        <h2 className="uppercase text-center text-(length:--font-size-h1) tracking-(--letter-spacing-wide)">
-          Welcome In Nightclub
-        </h2>
-        <div className="bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent w-[99px] h-0.5 mx-auto mt-3"></div>
+        {/* Pink gradient */}
+        <SectionHeading title="Welcome In Nightclub" />
 
         <div className="flex flex-col gap-6 mt-14">
           <Image
@@ -103,8 +107,10 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Featured Events */}
       <FeaturedEvents featuredEvents={featuredEvents} />
 
+      {/* Galleri */}
       <Gallery gallery={gallery} />
     </main>
   );

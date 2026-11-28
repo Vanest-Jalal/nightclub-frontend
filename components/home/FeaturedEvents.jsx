@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import FeaturedEventCard from "./FeaturedEventCard";
+import SectionHeading from "../shared/SectionHeading";
 
 /* Featured Events */
 export default function FeaturedEvents({ featuredEvents }) {
@@ -13,11 +14,8 @@ export default function FeaturedEvents({ featuredEvents }) {
 
   return (
     <section className="py-12 px-6 bg-[url(/assets/bg/slider_bg_overlay.png)] bg-cover bg-center">
-      {/* Overskrift */}
-      <h2 className="uppercase text-center text-(length:--font-size-h1) tracking-(--letter-spacing-wide)">
-        Featured Events
-      </h2>
-      <div className="bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent w-[99px] h-0.5 mx-auto mt-3 mb-8"></div>
+      {/* Overskrift + pink gradient */}
+      <SectionHeading title="Featured Events" />
 
       {/* Eventkort */}
       <FeaturedEventCard

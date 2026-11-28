@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import SectionHeading from "../shared/SectionHeading";
 
 /* Galleri */
 export default function Gallery({ gallery }) {
@@ -9,11 +10,8 @@ export default function Gallery({ gallery }) {
 
   return (
     <section className="py-12 bg-[url(/assets/bg/pattern_small.jpg)]">
-      {/* Overskrift */}
-      <h2 className="uppercase text-center text-(length:--font-size-h1) tracking-(--letter-spacing-wide)">
-        Night Club Gallery
-      </h2>
-      <div className="bg-linear-to-r from-transparent via-(--color-pink-500) to-transparent w-[99px] h-0.5 mx-auto mt-3 mb-8"></div>
+      {/* Overskrift + pink gradient */}
+      <SectionHeading title="Night Club Gallery" />
 
       {/* Galleribilleder */}
       {gallery.map((image, index) => (
